@@ -1,6 +1,6 @@
-/* =========================================
+/* =====================================================
    RESET
-========================================= */
+===================================================== */
 
 * {
     margin: 0;
@@ -8,21 +8,28 @@
     box-sizing: border-box;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
     font-family: "DM Sans", sans-serif;
+
     background: #f7f5ef;
+
     color: #132c2b;
+
     line-height: 1.6;
 }
+
 
 img {
     width: 100%;
     display: block;
 }
+
 
 a {
     text-decoration: none;
@@ -30,51 +37,79 @@ a {
 }
 
 
-/* =========================================
+/* =====================================================
    GENERAL
-========================================= */
+===================================================== */
 
 .section {
+
     padding: 90px 22px;
+
     max-width: 900px;
+
     margin: auto;
+
 }
+
 
 .section-label {
+
     font-size: 11px;
+
     letter-spacing: 3px;
+
     font-weight: 700;
+
     margin-bottom: 15px;
+
     opacity: .6;
+
 }
+
 
 h2 {
+
     font-family: "Playfair Display", serif;
+
     font-size: clamp(42px, 12vw, 82px);
+
     line-height: .95;
+
     margin-bottom: 25px;
+
 }
+
 
 h2 em {
+
     color: #168f87;
+
     font-style: italic;
+
 }
+
 
 p {
+
     color: #536765;
+
 }
 
 
-/* =========================================
+/* =====================================================
    HERO
-========================================= */
+===================================================== */
 
 .hero {
+
     min-height: 100svh;
+
     position: relative;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     text-align: center;
@@ -85,212 +120,319 @@ p {
         url("images/hero.jpg");
 
     background-size: cover;
+
     background-position: center;
+
 }
 
+
 .hero-overlay {
+
     position: absolute;
+
     inset: 0;
 
     background:
         linear-gradient(
             180deg,
             rgba(0,0,0,.2),
-            rgba(0,0,0,.65)
+            rgba(0,0,0,.68)
         );
+
 }
 
+
 .hero-content {
+
     position: relative;
+
     z-index: 2;
 
     padding: 30px;
+
 }
+
 
 .eyebrow {
+
     font-size: 11px;
+
     letter-spacing: 4px;
+
     margin-bottom: 20px;
+
 }
+
 
 .hero h1 {
+
     font-family: "Playfair Display", serif;
 
-    font-size: clamp(70px, 20vw, 150px);
+    font-size: clamp(
+        70px,
+        20vw,
+        150px
+    );
 
     line-height: .75;
+
     letter-spacing: -5px;
+
 }
+
 
 .hero h1 span {
+
     color: #8ee4dc;
+
     font-style: italic;
+
 }
+
 
 .hero-date {
+
     color: white;
+
     margin-top: 30px;
+
     font-size: 15px;
+
     letter-spacing: 2px;
+
 }
 
 
-/* =========================================
+/* =====================================================
    COUNTDOWN
-========================================= */
+===================================================== */
 
 .countdown {
+
     display: flex;
+
     justify-content: center;
 
     gap: 7px;
 
     margin: 35px 0;
+
 }
+
 
 .count-box {
+
     width: 68px;
+
     padding: 12px 5px;
 
-    background: rgba(255,255,255,.13);
+    background:
+        rgba(255,255,255,.13);
+
     backdrop-filter: blur(8px);
 
-    border: 1px solid rgba(255,255,255,.2);
+    border:
+        1px solid
+        rgba(255,255,255,.2);
 
     border-radius: 12px;
+
 }
 
+
 .count-box span {
+
     display: block;
 
     font-size: 25px;
+
     font-weight: 700;
+
 }
+
 
 .count-box small {
+
     font-size: 8px;
+
     letter-spacing: 1px;
+
     opacity: .7;
+
 }
 
 
-/* =========================================
+/* =====================================================
    BUTTON
-========================================= */
+===================================================== */
 
 .start-btn {
+
     display: inline-block;
 
     padding: 15px 30px;
 
     background: white;
+
     color: #123a38;
 
     border-radius: 100px;
 
     font-weight: 700;
+
     font-size: 13px;
 
     transition: .3s;
+
 }
+
 
 .start-btn:hover {
-    transform: translateY(-4px);
+
+    transform:
+        translateY(-4px);
+
 }
 
 
-/* =========================================
-   SCROLL
-========================================= */
+/* =====================================================
+   SCROLL INDICATOR
+===================================================== */
 
 .scroll-indicator {
+
     position: absolute;
+
     bottom: 25px;
 
     left: 50%;
-    transform: translateX(-50%);
+
+    transform:
+        translateX(-50%);
 
     font-size: 9px;
+
     letter-spacing: 3px;
 
     opacity: .7;
+
 }
+
 
 .scroll-indicator div {
+
     font-size: 20px;
+
 }
 
 
-/* =========================================
+/* =====================================================
    INTRO
-========================================= */
+===================================================== */
 
 .intro {
+
     text-align: center;
+
     padding-top: 120px;
+
     padding-bottom: 120px;
+
 }
 
+
 .intro p {
+
     max-width: 600px;
+
     margin: auto;
 
     font-size: 17px;
+
 }
 
 
-/* =========================================
+/* =====================================================
    DAY HEADER
-========================================= */
+===================================================== */
 
 .day-header {
+
     display: flex;
-    justify-content: space-between;
+
+    justify-content:
+        space-between;
+
     align-items: center;
 
     margin-top: 70px;
+
     margin-bottom: 35px;
+
 }
+
 
 .day-header span {
+
     font-size: 11px;
+
     letter-spacing: 3px;
+
     opacity: .5;
+
 }
+
 
 .day-header h3 {
-    font-family: "Playfair Display", serif;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
     font-size: 36px;
+
 }
+
 
 .day-icon {
+
     font-size: 40px;
+
 }
 
 
-/* =========================================
+/* =====================================================
    TIMELINE
-========================================= */
+===================================================== */
 
 .timeline {
+
     position: relative;
+
 }
 
+
 .timeline::before {
+
     content: "";
 
     position: absolute;
 
     left: 19px;
+
     top: 10px;
+
     bottom: 10px;
 
     width: 2px;
 
     background: #d5dfdc;
+
 }
 
+
 .timeline-item {
+
     display: flex;
 
     gap: 18px;
@@ -298,16 +440,22 @@ p {
     margin-bottom: 35px;
 
     position: relative;
+
 }
 
+
 .timeline-dot {
+
     width: 40px;
+
     height: 40px;
 
     flex-shrink: 0;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     background: #e1f0ed;
@@ -315,12 +463,16 @@ p {
     border-radius: 50%;
 
     position: relative;
+
     z-index: 2;
 
     font-size: 18px;
+
 }
 
+
 .timeline-card {
+
     background: white;
 
     padding: 24px;
@@ -330,58 +482,218 @@ p {
     flex: 1;
 
     box-shadow:
-        0 8px 30px rgba(24, 56, 53, .06);
+        0 8px 30px
+        rgba(24, 56, 53, .06);
+
 }
 
+
 .timeline-card .time {
+
     font-size: 10px;
+
     letter-spacing: 2px;
+
     font-weight: 700;
 
     color: #168f87;
+
 }
+
 
 .timeline-card h4 {
+
     font-size: 22px;
-    margin: 5px 0 8px;
+
+    margin:
+        5px 0 8px;
+
 }
+
 
 .timeline-card p {
+
     font-size: 14px;
+
 }
 
 
-/* =========================================
-   LOCATION
-========================================= */
+/* =====================================================
+   ROUTE
+===================================================== */
 
-.location-card {
-    background: #f1f7f5;
+.route {
 
     margin-top: 18px;
 
+    padding: 12px;
+
+    background: #f1f7f5;
+
+    border-radius: 10px;
+
+    font-size: 12px;
+
+    color: #31514e;
+
+    font-weight: 600;
+
+}
+
+
+/* =====================================================
+   RESORT BOX
+===================================================== */
+
+.resort-box {
+
+    margin-top: 20px;
+
+    background: #f1f7f5;
+
     padding: 15px;
 
+    border-radius: 15px;
+
+}
+
+
+.resort-title {
+
+    font-size: 13px;
+
+    margin-bottom: 13px;
+
+}
+
+
+/* =====================================================
+   RESORT LINKS
+===================================================== */
+
+.resort-links {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+
+.resort-links a {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content:
+        space-between;
+
+    padding: 14px 16px;
+
+    background: white;
+
+    color: #153b38;
+
     border-radius: 12px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    border:
+        1px solid #e8efed;
+
+    transition:
+        all .25s ease;
+
 }
 
-.location-card strong {
+
+.resort-links a:hover {
+
+    background: #153b38;
+
+    color: white;
+
+    transform:
+        translateX(5px);
+
+}
+
+
+.resort-links .arrow {
+
+    font-size: 18px;
+
+    transition:
+        transform .25s ease;
+
+}
+
+
+.resort-links a:hover
+.arrow {
+
+    transform:
+        translate(
+            3px,
+            -3px
+        );
+
+}
+
+
+/* =====================================================
+   MAP BUTTON
+===================================================== */
+
+.map-button {
+
     display: block;
-    margin-bottom: 7px;
+
+    text-align: center;
+
+    margin-top: 10px;
+
+    padding: 12px;
+
+    background: #168f87;
+
+    color: white;
+
+    border-radius: 10px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    transition: .25s;
+
 }
 
-.location-card a {
-    font-size: 12px;
-    color: #168f87;
-    font-weight: 700;
+
+.map-button:hover {
+
+    background: #116f69;
+
 }
+
+
+/* =====================================================
+   TBD
+===================================================== */
 
 .tbd {
+
     display: inline-block;
 
     margin-top: 15px;
 
     font-size: 9px;
+
     letter-spacing: 2px;
 
     background: #eeeae0;
@@ -389,23 +701,32 @@ p {
     padding: 6px 10px;
 
     border-radius: 50px;
+
 }
 
 
-/* =========================================
+/* =====================================================
    TOUR CARD
-========================================= */
+===================================================== */
 
 .tour-card {
+
     background: #153b38;
+
     color: white;
+
 }
+
 
 .tour-card p {
+
     color: #b9cfcc;
+
 }
 
+
 .activity-grid {
+
     display: grid;
 
     grid-template-columns:
@@ -414,53 +735,82 @@ p {
     gap: 8px;
 
     margin-top: 22px;
+
 }
 
+
 .activity {
+
     text-align: center;
 
     padding: 14px 5px;
 
-    background: rgba(255,255,255,.08);
+    background:
+        rgba(255,255,255,.08);
 
     border-radius: 12px;
+
 }
+
 
 .activity-icon {
+
     font-size: 25px;
+
     margin-bottom: 5px;
+
 }
+
 
 .activity strong {
+
     display: block;
+
     font-size: 10px;
+
 }
+
 
 .activity span {
+
     font-size: 8px;
+
     opacity: .5;
+
 }
 
 
-/* =========================================
+/* =====================================================
    TOUR SECTION
-========================================= */
+===================================================== */
 
 .tour-section {
+
     max-width: 100%;
+
     background: #153b38;
+
     color: white;
+
 }
+
 
 .tour-section p {
+
     color: #b9cfcc;
+
 }
+
 
 .tour-description {
+
     max-width: 600px;
+
 }
 
+
 .tour-cards {
+
     display: grid;
 
     grid-template-columns:
@@ -469,60 +819,85 @@ p {
     gap: 15px;
 
     margin-top: 50px;
+
 }
 
+
 .tour-feature {
+
     position: relative;
 
     min-height: 220px;
 
     padding: 25px;
 
-    border: 1px solid rgba(255,255,255,.12);
+    border:
+        1px solid
+        rgba(255,255,255,.12);
 
     border-radius: 20px;
 
     transition: .3s;
+
 }
+
 
 .tour-feature:hover {
-    transform: translateY(-8px);
+
+    transform:
+        translateY(-8px);
+
 }
 
+
 .feature-number {
+
     position: absolute;
 
     top: 20px;
+
     right: 20px;
 
     font-size: 10px;
+
     opacity: .4;
+
 }
+
 
 .feature-icon {
+
     font-size: 40px;
+
     margin-bottom: 20px;
+
 }
+
 
 .tour-feature h3 {
-    font-family: "Playfair Display", serif;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
     font-size: 27px;
+
 }
+
 
 .tour-feature p {
+
     font-size: 13px;
+
 }
 
 
-/* =========================================
+/* =====================================================
    GALLERY
-========================================= */
-
-.gallery-section {
-    background: #f7f5ef;
-}
+===================================================== */
 
 .gallery {
+
     display: grid;
 
     grid-template-columns:
@@ -531,38 +906,56 @@ p {
     gap: 8px;
 
     margin-top: 35px;
+
 }
 
+
 .gallery-item {
+
     height: 180px;
 
     overflow: hidden;
 
     border-radius: 15px;
+
 }
+
 
 .gallery-item.large {
-    grid-column: span 2;
+
+    grid-column:
+        span 2;
+
     height: 280px;
+
 }
 
+
 .gallery-item img {
+
     height: 100%;
+
     object-fit: cover;
 
     transition: .5s;
+
 }
+
 
 .gallery-item:hover img {
-    transform: scale(1.05);
+
+    transform:
+        scale(1.05);
+
 }
 
 
-/* =========================================
+/* =====================================================
    VIDEO
-========================================= */
+===================================================== */
 
 .video-wrapper {
+
     margin-top: 35px;
 
     overflow: hidden;
@@ -570,25 +963,34 @@ p {
     border-radius: 20px;
 
     background: #111;
+
 }
 
+
 .video-wrapper video {
+
     display: block;
 
     width: 100%;
+
 }
+
 
 .video-note {
+
     margin-top: 12px;
+
     font-size: 12px;
+
 }
 
 
-/* =========================================
+/* =====================================================
    PACKING
-========================================= */
+===================================================== */
 
 .packing-list {
+
     display: grid;
 
     grid-template-columns:
@@ -597,9 +999,12 @@ p {
     gap: 10px;
 
     margin-top: 35px;
+
 }
 
+
 .check-item {
+
     background: white;
 
     padding: 16px;
@@ -611,27 +1016,42 @@ p {
     font-size: 14px;
 
     transition: .2s;
+
 }
+
 
 .check-item input {
+
     margin-right: 8px;
+
 }
 
-.check-item:has(input:checked) {
+
+.check-item:has(
+    input:checked
+) {
+
     opacity: .5;
-    text-decoration: line-through;
+
+    text-decoration:
+        line-through;
+
 }
 
 
-/* =========================================
+/* =====================================================
    BUDGET
-========================================= */
+===================================================== */
 
 .budget-section {
+
     background: #e5efeb;
+
 }
 
+
 .budget-box {
+
     background: white;
 
     border-radius: 20px;
@@ -639,64 +1059,89 @@ p {
     padding: 20px;
 
     margin-top: 30px;
+
 }
 
+
 .budget-row {
+
     display: flex;
 
     align-items: center;
-    justify-content: space-between;
+
+    justify-content:
+        space-between;
 
     gap: 10px;
 
     padding: 12px 0;
 
-    border-bottom: 1px solid #edf0ee;
+    border-bottom:
+        1px solid #edf0ee;
+
 }
+
 
 .budget-row span {
+
     font-size: 13px;
+
 }
 
+
 .budget-row input {
+
     width: 90px;
 
     padding: 9px;
 
-    border: 1px solid #ddd;
+    border:
+        1px solid #ddd;
 
     border-radius: 8px;
 
     text-align: right;
+
 }
 
+
 .budget-total {
+
     display: flex;
 
-    justify-content: space-between;
+    justify-content:
+        space-between;
 
     padding-top: 20px;
 
     font-size: 14px;
+
 }
+
 
 .budget-total strong {
+
     color: #168f87;
+
     font-size: 25px;
+
 }
 
 
-/* =========================================
+/* =====================================================
    FINAL
-========================================= */
+===================================================== */
 
 .final-section {
+
     min-height: 85svh;
 
     position: relative;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     text-align: center;
@@ -706,39 +1151,65 @@ p {
     background:
         url("images/final.jpg")
         center / cover;
+
 }
+
 
 .final-overlay {
+
     position: absolute;
+
     inset: 0;
 
-    background: rgba(0,0,0,.55);
+    background:
+        rgba(0,0,0,.55);
+
 }
+
 
 .final-content {
+
     position: relative;
+
     z-index: 2;
+
 }
+
 
 .final-content h2 {
-    font-size: clamp(60px, 18vw, 130px);
+
+    font-size:
+        clamp(
+            60px,
+            18vw,
+            130px
+        );
+
 }
+
 
 .final-content p {
+
     color: white;
+
 }
+
 
 .heart {
+
     margin-top: 25px;
+
     font-size: 25px;
+
 }
 
 
-/* =========================================
+/* =====================================================
    FOOTER
-========================================= */
+===================================================== */
 
 footer {
+
     background: #102e2c;
 
     color: white;
@@ -746,65 +1217,126 @@ footer {
     text-align: center;
 
     padding: 30px 20px;
+
 }
+
 
 footer p {
+
     color: white;
+
     font-size: 13px;
+
 }
+
 
 footer small {
+
     opacity: .5;
+
 }
 
 
-/* =========================================
+/* =====================================================
+   SCROLL ANIMATIONS
+===================================================== */
+
+.animate {
+
+    opacity: 0;
+
+    transform:
+        translateY(25px);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+
+}
+
+
+.animate.show {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+}
+
+
+/* =====================================================
    DESKTOP
-========================================= */
+===================================================== */
 
 @media (min-width: 700px) {
 
     .section {
+
         padding-top: 130px;
+
         padding-bottom: 130px;
+
     }
+
 
     .count-box {
+
         width: 85px;
+
         padding: 15px;
+
     }
 
+
     .count-box span {
+
         font-size: 32px;
+
     }
 
 }
 
 
-/* =========================================
+/* =====================================================
    SMALL PHONES
-========================================= */
+===================================================== */
 
 @media (max-width: 380px) {
 
     .count-box {
+
         width: 58px;
+
     }
+
 
     .count-box span {
+
         font-size: 20px;
+
     }
+
 
     .count-box small {
+
         font-size: 7px;
+
     }
+
 
     .activity-grid {
+
         gap: 4px;
+
     }
 
+
     .activity {
-        padding: 10px 3px;
+
+        padding:
+            10px 3px;
+
     }
 
 }
