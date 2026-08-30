@@ -1559,3 +1559,109 @@ footer small {
     }
 
 }
+/* =====================================================
+   CAVE IN SAMAL RESORT VIDEO
+===================================================== */
+
+.tour-main-video {
+    position: relative;
+
+    height: 360px;
+
+    margin-top: 25px;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    background: #000;
+}
+
+
+.tour-main-video video {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* DARK GRADIENT */
+
+.video-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    padding: 60px 20px 20px;
+
+    background:
+        linear-gradient(
+            transparent 35%,
+            rgba(0, 0, 0, .85)
+        );
+
+    pointer-events: none;
+}
+
+
+.video-overlay span {
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: #8ee4dc;
+
+    font-weight: 700;
+
+    margin-bottom: 5px;
+}
+
+
+.video-overlay strong {
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 28px;
+
+    color: white;
+}
+
+
+.video-overlay small {
+    margin-top: 7px;
+
+    color: white;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    opacity: .75;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .tour-main-video {
+        height: 280px;
+    }
+
+
+    .video-overlay strong {
+        font-size: 22px;
+    }
+
+}
