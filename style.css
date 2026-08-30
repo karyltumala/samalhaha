@@ -1340,3 +1340,83 @@ footer small {
     }
 
 }
+/* =====================================================
+   FULLSCREEN IMAGE VIEWER
+===================================================== */
+
+.image-viewer {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    background:
+        rgba(0,0,0,.92);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    animation:
+        viewerFade .25s ease;
+
+}
+
+
+.image-viewer img {
+
+    max-width: 100%;
+
+    max-height: 90vh;
+
+    width: auto;
+
+    object-fit: contain;
+
+    border-radius: 10px;
+
+}
+
+
+.viewer-close {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 22px;
+
+    color: white;
+
+    font-size: 40px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    z-index: 2;
+
+}
+
+
+@keyframes viewerFade {
+
+    from {
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        opacity: 1;
+
+    }
+
+}
