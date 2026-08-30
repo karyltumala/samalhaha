@@ -1,21 +1,16 @@
 /* =====================================================
-   COUNTDOWN
+   SAMAL ESCAPE WEBSITE
 ===================================================== */
 
 
-/*
-    Trip starts:
-
-    September 5, 2026
-    10:00 AM
-
-*/
+/* =====================================================
+   COUNTDOWN
+===================================================== */
 
 const tripDate =
     new Date(
         "September 5, 2026 10:00:00"
     ).getTime();
-
 
 
 function updateCountdown() {
@@ -28,35 +23,21 @@ function updateCountdown() {
         tripDate - now;
 
 
-    /*
-        If the trip has started,
-        show zeros.
-    */
-
     if (difference <= 0) {
 
-        document.getElementById(
-            "days"
-        ).textContent = "00";
+        document.getElementById("days")
+            .textContent = "00";
 
+        document.getElementById("hours")
+            .textContent = "00";
 
-        document.getElementById(
-            "hours"
-        ).textContent = "00";
+        document.getElementById("minutes")
+            .textContent = "00";
 
-
-        document.getElementById(
-            "minutes"
-        ).textContent = "00";
-
-
-        document.getElementById(
-            "seconds"
-        ).textContent = "00";
-
+        document.getElementById("seconds")
+            .textContent = "00";
 
         return;
-
     }
 
 
@@ -69,8 +50,10 @@ function updateCountdown() {
 
     const hours =
         Math.floor(
-            (difference %
-                (1000 * 60 * 60 * 24))
+            (
+                difference %
+                (1000 * 60 * 60 * 24)
+            )
             /
             (1000 * 60 * 60)
         );
@@ -78,8 +61,10 @@ function updateCountdown() {
 
     const minutes =
         Math.floor(
-            (difference %
-                (1000 * 60 * 60))
+            (
+                difference %
+                (1000 * 60 * 60)
+            )
             /
             (1000 * 60)
         );
@@ -87,47 +72,33 @@ function updateCountdown() {
 
     const seconds =
         Math.floor(
-            (difference %
-                (1000 * 60))
+            (
+                difference %
+                (1000 * 60)
+            )
             /
             1000
         );
 
 
-    document.getElementById(
-        "days"
-    ).textContent =
-        String(days).padStart(
-            2,
-            "0"
-        );
+    document.getElementById("days")
+        .textContent =
+        String(days).padStart(2, "0");
 
 
-    document.getElementById(
-        "hours"
-    ).textContent =
-        String(hours).padStart(
-            2,
-            "0"
-        );
+    document.getElementById("hours")
+        .textContent =
+        String(hours).padStart(2, "0");
 
 
-    document.getElementById(
-        "minutes"
-    ).textContent =
-        String(minutes).padStart(
-            2,
-            "0"
-        );
+    document.getElementById("minutes")
+        .textContent =
+        String(minutes).padStart(2, "0");
 
 
-    document.getElementById(
-        "seconds"
-    ).textContent =
-        String(seconds).padStart(
-            2,
-            "0"
-        );
+    document.getElementById("seconds")
+        .textContent =
+        String(seconds).padStart(2, "0");
 
 }
 
@@ -158,7 +129,6 @@ const total =
     );
 
 
-
 function calculateBudget() {
 
     let sum = 0;
@@ -167,13 +137,10 @@ function calculateBudget() {
     expenses.forEach(
         input => {
 
-            const value =
+            sum +=
                 parseFloat(
                     input.value
                 ) || 0;
-
-
-            sum += value;
 
         }
     );
@@ -185,7 +152,6 @@ function calculateBudget() {
         );
 
 }
-
 
 
 expenses.forEach(
@@ -202,7 +168,7 @@ expenses.forEach(
 
 
 /* =====================================================
-   SAVE BUDGET
+   SAVE BUDGET TO BROWSER
 ===================================================== */
 
 expenses.forEach(
@@ -210,7 +176,7 @@ expenses.forEach(
 
         const saved =
             localStorage.getItem(
-                `expense-${index}`
+                `samal-expense-${index}`
             );
 
 
@@ -226,9 +192,10 @@ expenses.forEach(
             () => {
 
                 localStorage.setItem(
-                    `expense-${index}`,
+                    `samal-expense-${index}`,
                     input.value
                 );
+
 
             }
         );
@@ -236,11 +203,6 @@ expenses.forEach(
     }
 );
 
-
-/*
-    Recalculate after loading
-    saved expenses.
-*/
 
 calculateBudget();
 
@@ -256,13 +218,12 @@ const checkboxes =
     );
 
 
-
 checkboxes.forEach(
     (checkbox, index) => {
 
         const saved =
             localStorage.getItem(
-                `packing-${index}`
+                `samal-packing-${index}`
             );
 
 
@@ -278,7 +239,7 @@ checkboxes.forEach(
             () => {
 
                 localStorage.setItem(
-                    `packing-${index}`,
+                    `samal-packing-${index}`,
                     checkbox.checked
                 );
 
@@ -291,25 +252,24 @@ checkboxes.forEach(
 
 
 /* =====================================================
-   SCROLL ANIMATION
+   SCROLL ANIMATIONS
 ===================================================== */
 
 const animatedElements =
     document.querySelectorAll(
         `
         .timeline-card,
-        .tour-feature,
-        .gallery-item,
+        .tour-activity,
+        .inspo-card,
+        .inspo-tip,
         .budget-box,
         .check-item
         `
     );
 
 
-
 const observer =
     new IntersectionObserver(
-
         entries => {
 
             entries.forEach(
@@ -329,13 +289,10 @@ const observer =
             );
 
         },
-
         {
             threshold: 0.12
         }
-
     );
-
 
 
 animatedElements.forEach(
@@ -356,82 +313,25 @@ animatedElements.forEach(
 
 
 /* =====================================================
-   IMAGE CLICK EFFECT
+   FULLSCREEN PHOTO VIEWER
 ===================================================== */
 
-const galleryImages =
+const clickableImages =
     document.querySelectorAll(
-        ".gallery-item img"
+        ".clickable-image"
     );
 
 
-galleryImages.forEach(
+clickableImages.forEach(
     image => {
 
         image.addEventListener(
             "click",
             () => {
 
-                /*
-                    Simple fullscreen image viewer
-                */
-
-                const viewer =
-                    document.createElement(
-                        "div"
-                    );
-
-
-                viewer.className =
-                    "image-viewer";
-
-
-                viewer.innerHTML = `
-
-                    <div class="viewer-close">
-                        ×
-                    </div>
-
-                    <img
-                        src="${image.src}"
-                        alt="${image.alt}"
-                    >
-
-                `;
-
-
-                document.body.appendChild(
-                    viewer
-                );
-
-
-                viewer
-                    .querySelector(
-                        ".viewer-close"
-                    )
-                    .addEventListener(
-                        "click",
-                        () => {
-
-                            viewer.remove();
-
-                        }
-                    );
-
-
-                viewer.addEventListener(
-                    "click",
-                    event => {
-
-                        if (
-                            event.target === viewer
-                        ) {
-
-                            viewer.remove();
-
-                        }
-
-                    }
+                openImageViewer(
+                    image.src,
+                    image.alt
                 );
 
             }
@@ -439,3 +339,105 @@ galleryImages.forEach(
 
     }
 );
+
+
+
+function openImageViewer(
+    imageSource,
+    imageAlt
+) {
+
+    const viewer =
+        document.createElement(
+            "div"
+        );
+
+
+    viewer.className =
+        "image-viewer";
+
+
+    viewer.innerHTML = `
+
+        <button
+            class="viewer-close"
+            aria-label="Close image"
+        >
+            ×
+        </button>
+
+        <img
+            src="${imageSource}"
+            alt="${imageAlt}"
+        >
+
+    `;
+
+
+    document.body.appendChild(
+        viewer
+    );
+
+
+    /* CLOSE BUTTON */
+
+    viewer
+        .querySelector(
+            ".viewer-close"
+        )
+        .addEventListener(
+            "click",
+            () => {
+
+                viewer.remove();
+
+            }
+        );
+
+
+    /* CLICK OUTSIDE PHOTO */
+
+    viewer.addEventListener(
+        "click",
+        event => {
+
+            if (
+                event.target === viewer
+            ) {
+
+                viewer.remove();
+
+            }
+
+        }
+    );
+
+
+    /* ESC KEY */
+
+    function closeWithEscape(
+        event
+    ) {
+
+        if (
+            event.key === "Escape"
+        ) {
+
+            viewer.remove();
+
+            document.removeEventListener(
+                "keydown",
+                closeWithEscape
+            );
+
+        }
+
+    }
+
+
+    document.addEventListener(
+        "keydown",
+        closeWithEscape
+    );
+
+}
